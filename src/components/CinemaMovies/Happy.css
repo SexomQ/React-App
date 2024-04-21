@@ -1,0 +1,18 @@
+.card_button {
+    background-color: #44488f;
+    border: none;
+    
+}
+
+.card_button:hover {
+    background-color: #44486f;
+}
+
+.card_content {
+    width: 33%;
+    margin-left: 20px;
+}
+
+.card_content:first-child{
+    margin-left: 0;
+}
