@@ -16,7 +16,7 @@ const DataHappy = [
     {
     id: "3",
     title: "Abigail",
-    category: "Animation, Adventure, Comedy",
+    category: "Animation, Adventure, Comedie",
     img: "https://www.happycinema.md/files/movie-image/MDCHIHPY/12/10/121/249_thumbnail_1-bx200x286.jpg?_s=96e7d3be81b8c987e4eb369cbf63aeec",
     url: "https://www.happycinema.md/m/the-croods-a-new-age-cnmg3313379"
     },

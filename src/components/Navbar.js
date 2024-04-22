@@ -20,7 +20,7 @@ function NavbarBar(){
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="ms-auto">
                     <Nav.Link href="#Movies">All Movies</Nav.Link>
-                    <Nav.Link href="#Recommend" >Recommended</Nav.Link>
+                    <Nav.Link className='disabled' href="#Recommended" >Recommended</Nav.Link>
                 </Nav>
                 {/* add a button to toggle the dark theme */}
                 <Nav className="justify-content-end">

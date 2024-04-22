@@ -3,8 +3,7 @@ import { Card, Button, CardFooter } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import './cards.css';
 
-const HappyCard = ({items_}) => {
-
+const CineplexCard = ({ items_ }) => {
     return (
         <div className="mt-4 d-flex flex-wrap justify-content-start w-100 cards">
             {
@@ -33,4 +32,4 @@ const HappyCard = ({items_}) => {
     );
 }
 
-export default HappyCard;
+export default CineplexCard;

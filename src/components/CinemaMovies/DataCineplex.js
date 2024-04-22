@@ -1,19 +1,32 @@
-const DataHappy = [
+const DataCineplex = [
     {
     id: "1",
     title: "Abigail",
-    category: "Animation, Adventure, Comedy",
-    img: "https://www.happycinema.md/files/movie-image/MDCHIHPY/12/10/121/249_thumbnail_1-bx200x286.jpg?_s=96e7d3be81b8c987e4eb369cbf63aeec",
-    url: "https://www.happycinema.md/m/the-croods-a-new-age-cnmg3313379"
+    category: "Horror",
+    img: "https://cineplex.md/posters/Abigail RO.jpg",
+    url: "https://cineplex.md/movie-details/Abigail_RU_uuid#/"
     },
     {
     id: "2",
-    title: "Oaspete din viitor RU",
+    title: "Oaspete din viitor",
     category: "Horror",
-    img: "https://www.happycinema.md/files/movie-image/MDCHIHPY/14/70/147/305_thumbnail_1-bx200x286.jpg?_s=00a876179c6c5115f6e7bc42c711d30f",
-    url: "https://www.happycinema.md/m/the-unholy-cnmg3313380"
+    img: "https://cineplex.md/posters/100 Ro.jpg",
+    url: "https://cineplex.md//movie-details/Guestfromthefuture_RU_uuid"
     },
-    
+    {
+    id: "3",
+    title: "Omul maimuta",
+    category: "Actiune",
+    img: "https://cineplex.md/posters/mm ro.jpg",
+    url: "https://cineplex.md/movie-details/MonkeyMan_RU_uuid#/"
+    },
+    {
+    id: "4",
+    title: "Regele Arthur",
+    category: "Aventura",
+    img: "https://cineplex.md/posters/artur RO.jpg",
+    url: "https://cineplex.md/movie-details/ArthurtheKing_RU_uuid"
+    }
   ];
    
-  export default DataHappy;
+  export default DataCineplex;

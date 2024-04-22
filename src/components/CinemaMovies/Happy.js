@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import DataHappy from "./DataHappy";
 import HappyCard from "./HappyCard";
 
 
-function Happy() {
-    const [item] = useState(DataHappy);
+function Happy({items}) {
 
     return (
         <div className="Happy mt-5">
             <h4 className="">Happy Cinema</h4>
             {/* movies cards */}
-            <div>
-                <HappyCard item={item} />
+            <div style={{margin:"0 -10px"}}>
+                <HappyCard items_={items} />
             </div>
         </div>
     );
