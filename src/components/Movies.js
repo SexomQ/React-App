@@ -7,7 +7,7 @@ import DataHappy from "./CinemaMovies/DataHappy.js";
 import DataCineplex from "./CinemaMovies/DataCineplex.js";
 
 
-function Movies() {
+function Movies( {handleAdd}) {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredDataHappy, setFilteredDataHappy] = useState(DataHappy);
     const [filteredDataCineplex, setFilteredDataCineplex] = useState(DataCineplex);
@@ -32,7 +32,7 @@ function Movies() {
             <Container>
                 <h3 className="pt-5 mx-auto" style={{textAlign: "center"}}>Latest Movies</h3>
                 <div className="Filter mt-3">
-                    <label className="me-3">Search by category:</label>
+                    <label className="me-3">Search:</label>
                     <input
                         type="text"
                         placeholder="Search..."
@@ -40,8 +40,8 @@ function Movies() {
                         onChange={handleSearch}
                     />
                 </div>
-                <Happy items={filteredDataHappy}/>
-                <Cineplex items={filteredDataCineplex}/>
+                <Happy items={filteredDataHappy} handleAdd={handleAdd}/>
+                <Cineplex items={filteredDataCineplex} handleAdd={handleAdd}/>
             </Container>
         </div>
     );

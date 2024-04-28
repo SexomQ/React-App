@@ -4,6 +4,14 @@
     
 }
 
+.add_button {
+    position:absolute;
+    right: 10px;
+    top: 10px;
+    width: 47px;
+    height: 47px;
+}
+
 .card_button:hover {
     background-color: #44486f;
 }

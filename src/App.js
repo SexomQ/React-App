@@ -9,10 +9,19 @@ function App() {
 
     const { theme } = React.useContext(ThemeContext); // Use the context hook to access the context
 
+    const [cart, setCart] = React.useState([]);
+
+    const handleAdd = (item) => {
+        if (!cart.includes(item)) {
+            setCart([...cart, item]);
+            
+        }
+    }
+
     return (
         <div data-bs-theme={`${theme}`}>
-            <NavbarBar />
-            <Movies />
+            <NavbarBar cart_items={cart} setCart={setCart}/>
+            <Movies handleAdd={handleAdd}/>
         </div>
     );
 }
