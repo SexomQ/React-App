@@ -9,18 +9,27 @@ function App() {
 
     const { theme } = React.useContext(ThemeContext); // Use the context hook to access the context
 
-    const [cart, setCart] = React.useState([]);
+    // const [cart, setCart] = React.useState([]);
+
+    const cart = JSON.parse(localStorage.getItem('cart'));
 
     const handleAdd = (item) => {
-        if (!cart.includes(item)) {
-            setCart([...cart, item]);
+        // if (!cart.includes(item)) {
+        //     setCart([...cart, item]);
             
+        // }
+        const cart = JSON.parse(localStorage.getItem('cart')) ;
+        if (!cart.some(cartItem => cartItem.id === item.id)) {
+            const newCart = [...cart, item];
+            localStorage.setItem('cart', JSON.stringify(newCart));
         }
+        console.log(cart);
+        
     }
 
     return (
         <div data-bs-theme={`${theme}`}>
-            <NavbarBar cart_items={cart} setCart={setCart}/>
+            <NavbarBar cart_items={cart}/>
             <Movies handleAdd={handleAdd}/>
         </div>
     );

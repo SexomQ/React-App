@@ -9,7 +9,7 @@ import { ThemeContext } from './ThemeContext.js'; // Import ThemeContext
 import './Navbar.css';
 import Cart from './Cart.js';
 
-function NavbarBar({cart_items, setCart}){
+function NavbarBar({cart_items}){
     
     const { theme, toggleTheme } = useContext(ThemeContext); // Use the context hook to access the context
 
@@ -21,7 +21,7 @@ function NavbarBar({cart_items, setCart}){
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="ms-auto">
                     <Nav.Link href="/">All Movies</Nav.Link>
-                    <Cart cart_items={cart_items} setCart={setCart}/>
+                    <Cart cart_items={cart_items}/>
                 </Nav>
                 {/* add a button to toggle the dark theme */}
                 <Nav className="justify-content-end">

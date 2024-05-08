@@ -4,16 +4,31 @@ import Nav from 'react-bootstrap/Nav';
 import './cart.css';
 import Button from 'react-bootstrap/Button';
 
-function Cart({cart_items, setCart}) {
+function Cart({cart_items}) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    
+    const cart = JSON.parse(localStorage.getItem('cart'));
+
+    const [cartI, setCartI] = useState([...cart]);
+
 
     const handleRemove = (id) => {
-        const newCart = cart_items.filter((item) => item.id !== id);
-        setCart([...newCart]);
+        // const newCart = cart_items.filter((item) => item.id !== id);
+        // setCart([...newCart]);
+
+        // remove item from local storage
+        const cart = JSON.parse(localStorage.getItem('cart'));
+        const newCart = cart.filter((item) => item.id !== id);
+        localStorage.setItem('cart', JSON.stringify([...newCart]));
+        changeState();
       };
+
+    const changeState = () => {
+        setCartI(JSON.parse(localStorage.getItem('cart')));
+    }
 
 
   return (
@@ -26,11 +41,11 @@ function Cart({cart_items, setCart}) {
         </Offcanvas.Header>
         <Offcanvas.Body>
         <article>
-            {cart_items.map((item) => (
+            {cart.map((item) => (
                 <div className='box' key={item.id}>
                 <div className="cart_box">
                 <div className="cart_img">
-                    <img src={item.img} alt="" />
+                    <img src={item.img} alt="smth" />
                     <p>{item.title}</p>
                 </div>
                 </div>
