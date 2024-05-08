@@ -12,6 +12,10 @@
     height: 47px;
 }
 
+.add_button.in-cart {
+    background-color: #007918;
+}
+
 .card_button:hover {
     background-color: #44486f;
 }
