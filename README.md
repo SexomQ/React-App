@@ -2,7 +2,7 @@
 
 ## Description
 
-For now, the webpage is showing the latest movies presented in the most popular cinemas from Moldova. In the close future it will be updated with a back-end that will automatically update the webpage, scraping the cinema's websites.
+For now, the webpage is showing the latest movies presented in the most popular cinemas from Moldova. The backend is in the APP_BACKEND repository.
 
 ## Flow
 
