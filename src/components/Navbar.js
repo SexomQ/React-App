@@ -9,9 +9,18 @@ import { ThemeContext } from './ThemeContext.js'; // Import ThemeContext
 import './Navbar.css';
 import Cart from './Cart.js';
 
-function NavbarBar({cart_items}){
+function NavbarBar({cart_items, handleDeleteDB, handleTokenGeneration, token}){
     
     const { theme, toggleTheme } = useContext(ThemeContext); // Use the context hook to access the context
+
+    const [isAdmin, setIsAdmin] = React.useState(false);
+
+    const handleAdmin = () => {
+        if (!isAdmin) {
+            handleTokenGeneration();
+        }
+        setIsAdmin(!isAdmin);
+    }
 
     return (
         <Navbar expand="lg" className='navbar' fixed="top" data-bs-theme="dark">
@@ -20,6 +29,9 @@ function NavbarBar({cart_items}){
             <Navbar.Toggle aria-controls="basic-navbar-nav justify-content-end"  />
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="ms-auto">
+                  {/* TODO add delete database to button */}
+                  {isAdmin ? <Nav.Link onClick={handleDeleteDB} >Fuck DB</Nav.Link> : <div></div>}
+                    <Nav.Link onClick={handleAdmin}>Get Admin</Nav.Link>
                     <Nav.Link href="/">All Movies</Nav.Link>
                     <Cart cart_items={cart_items}/>
                 </Nav>
